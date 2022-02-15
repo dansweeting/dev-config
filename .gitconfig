@@ -1,0 +1,17 @@
+[user]
+	email = dansweeting@gmail.com
+	name = Dan Sweeting
+[alias]
+	ci = commit
+	st = status
+	co = checkout
+	br = branch
+	ll = !"git lg1-specific --all"
+	lll = !"git lg3-specific --all"
+	lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+        mo = "!f() { git merge origin/$1; }; f"
+[rerere]
+	enabled = true
+[pull]
+	ff = only
